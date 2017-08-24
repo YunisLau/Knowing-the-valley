@@ -86,7 +86,7 @@
 
     </script>
     <script>
-      $.ajax({
+      /*$.ajax({
         type:"post",
         url:"/api/login",
         data:{
@@ -96,7 +96,17 @@
         success:function (info) {
           console.log(info);
         }
+      });*/
+//      ----------------------------
+      $(function () {
+        //获取到userinfo的cookie信息
+          var userinfo = $.cookie("userinfo");
+          userinfo = JSON.parse(userinfo);
+//        渲染
+        var html = template("userinfo-tpl",userinfo);
+        $("#user-info").html(html);
       });
+      
     </script>
 </body>
 </html>

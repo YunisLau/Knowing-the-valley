@@ -2,12 +2,8 @@
 
   <div class="aside">
       <!-- 个人资料 -->
-      <div class="profile">
-      <!-- 头像 -->
-      <div class="avatar img-circle">
-      <img src="../../uploads/avatar.jpg">
-      </div>
-      <h4>布头儿</h4>
+      <div class="profile" id="user-info">
+      <!--挖个头像坑-->
       </div>
       <!-- 导航菜单 -->
       <div class="navs">
@@ -87,3 +83,11 @@
       </ul>
       </div>
       </div>
+        <script type="text/html" id="userinfo-tpl">
+            
+              <div class="avatar img-circle">
+                      <img src="{{tc_avatar}}">
+                  </div>
+                  <h4>{{tc_name}}</h4>
+              
+        </script>
